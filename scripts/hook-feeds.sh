@@ -14,6 +14,10 @@ svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-eqos luci
 # Add luci-proto-modemmanager
 svn co https://github.com/immortalwrt/luci/trunk/protocols/luci-proto-modemmanager luci/protocols/luci-proto-modemmanager
 
+# Add luci-app-gowebdav
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav luci/applications/luci-app-gowebdav
+svn co https://github.com/immortalwrt/packages/trunk/net/gowebdav packages/net/gowebdav
+
 # Add tmate
 git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 
@@ -22,6 +26,11 @@ svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/admin/goto
 
 # Add minieap
 svn co https://github.com/immortalwrt/packages/trunk/net/minieap packages/net/minieap
+popd
+
+# Replace smartdns with the official version
+rm -rf packages/net/smartdns
+svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 popd
 
 # Set to local feeds
