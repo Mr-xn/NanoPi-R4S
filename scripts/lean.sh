@@ -123,14 +123,14 @@ curl -sfL https://github.com/friendlyarm/friendlywrt/raw/master-v22.03/target/li
 chmod +x target/linux/rockchip/armv8/base-files/etc/init.d/fa-fancontrol target/linux/rockchip/armv8/base-files/usr/bin/fa-fancontrol*.sh
 
 # Add luci-app-poweroff
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/lean/luci-app-poweroff
 
 # Add luci-app-unblockneteasemusic
 rm -rf ../../customfeeds/luci/applications/luci-app-unblockmusic
-git clone --depth=1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git
+git clone --depth=1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/lean/luci-app-unblockneteasemusic
 
 # Add luci-app-smartdns & smartdns
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns
+svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Test kernel 5.10
 #sed -i 's/5.19/5.15/g' target/linux/rockchip/Makefile
